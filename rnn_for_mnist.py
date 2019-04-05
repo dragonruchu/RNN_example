@@ -121,9 +121,9 @@ def test():
         best_acc = acc
 
 
-for epoch in range(1, num_epochs + 1):
-    train(epoch)
-    test()
+# for epoch in range(1, num_epochs + 1):
+#     train(epoch)
+#     test()
 
 
 def find_lr(init_value=1e-8, final_value=10., beta=0.98):
@@ -181,7 +181,7 @@ def find_lr(init_value=1e-8, final_value=10., beta=0.98):
     return log_lrs, losses
 
 
-# print("Now is finding best lr:")
-# logs, losses = find_lr()
-# plt.plot(logs, losses)
-# plt.show()
+print("Now is finding best lr:")
+logs, losses = find_lr()
+plt.plot(logs, losses)
+plt.show()
